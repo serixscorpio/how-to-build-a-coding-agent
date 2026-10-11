@@ -231,11 +231,11 @@ func (a *Agent) runInference(ctx context.Context, conversation []anthropic.Messa
 	}
 
 	if a.verbose {
-		log.Printf("Making API call to Claude with model: %s and %d tools", anthropic.ModelClaudeOpus4_6, len(anthropicTools))
+		log.Printf("Making API call to Claude with model: %s and %d tools", anthropic.Model("claude-sonnet-5-5"), len(anthropicTools))
 	}
 
 	message, err := a.client.Messages.New(ctx, anthropic.MessageNewParams{
-		Model:     anthropic.ModelClaudeOpus4_6,
+		Model:     anthropic.Model("claude-sonnet-5-5"),
 		MaxTokens: int64(1024),
 		Messages:  conversation,
 		Tools:     anthropicTools,
