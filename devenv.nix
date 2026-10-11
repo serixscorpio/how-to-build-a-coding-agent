@@ -7,8 +7,8 @@
   # https://devenv.sh/packages/
   packages = [ 
     pkgs.git 
-    pkgs.nodejs_20
-    pkgs.nodePackages.typescript
+    pkgs.nodejs_24
+    pkgs.typescript
     pkgs.ripgrep
   ];
 
